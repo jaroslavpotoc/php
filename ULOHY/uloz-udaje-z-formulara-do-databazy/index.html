@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulár na vyplnenie výdavkov</title></head>
+<body>
+<form action="uloz-formular-do-databazy.php" method="POST">
+    Zadaj názov výdavku:
+    <input name="nazov" type="text"><br>
+    Kategória výdavku
+    <select name="kategoria">
+        <option value="Potraviny">Potraviny</option>
+        <option value="Zábava">Zábava</option>
+        <option value="Oblečenie">Oblečenie</option>
+        <option value="PHM">PHM</option>
+    </select><br>
+    Zadaj cenu:
+    <input name="cena" step="0.1" type="number"><br>Vyber dátum záznamu:
+    <input name="datum" type="date"><br>
+  <button type="submit">Uložiť</button>
+</form>
+</body>
+</html>
