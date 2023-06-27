@@ -18,100 +18,78 @@ $sql = "SELECT id, ean_kod, nazov, merna_jednotka, cela_flasa, prazdna_flasa, va
 $result = mysqli_query($conn, $sql);
 ?>
 
-    <h1>ZOBRAZ VŠETKY ZÁZNAMY | Váh a údaje o alkohole</h1>
+<h1>ZOBRAZ VŠETKY ZÁZNAMY | Váh a údaje o alkohole</h1>
 
-    <!-- Formulár pre vyhľadávanie -->
-    <form method="GET" action="">
-        <input type="text" name="search" id="search" placeholder="Vyhľadávanie..." value="<?php echo $search; ?>">
-    </form>
+<!-- Formulár pre vyhľadávanie -->
+<form method="GET" action="">
+    <input type="text" name="search" id="search" placeholder="Vyhľadávanie..." value="<?php echo $search; ?>">
+</form>
 
-    <table class='data-table'>
-        <tr>
-            <th>ID</th>
-            <th>EAN kód</th>
-            <th>Názov tovaru</th>
-            <th>Mj</th>
-            <th>Celá fľaša</th>
-            <th>Prázdna fľaša</th>
-            <th>Váha jednej dávky</th>
-            <th>Dátum</th>
-            <th>Čas</th>
-            <th>Upraviť</th>
-            <th>Odstrániť</th>
-        </tr>
-        <tr>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th>(ks / l / kg)</th>
-            <th>(gram)</th>
-            <th>(gram)</th>
-            <th>(gram)</th>
-            <th>(pridania / upravy)</th>
-            <th>(pridania / upravy)</th>
-            <th>(záznam)</th>
-            <th>(záznam)</th>
-        </tr>
-        <?php
-        if (mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>";
-                echo "<td>".$row["id"]."</td>";
-                echo "<td>".$row["ean_kod"]."</td>";
-                echo "<td>".$row["nazov"]."</td>";
-                echo "<td>".$row["merna_jednotka"]."</td>";
+<table class='data-table'>
+    <tr>
+        <th>ID</th>
+        <th>EAN kód</th>
+        <th>Názov tovaru</th>
+        <th>Mj</th>
+        <th>Celá fľaša</th>
+        <th>Prázdna fľaša</th>
+        <th>Váha jednej dávky</th>
+        <th>Dátum</th>
+        <th>Čas</th>
+        <th>Upraviť</th>
+        <th>Odstrániť</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>(ks / l / kg)</th>
+        <th>(gram)</th>
+        <th>(gram)</th>
+        <th>(gram)</th>
+        <th>(pridania / upravy)</th>
+        <th>(pridania / upravy)</th>
+        <th>(záznam)</th>
+        <th>(záznam)</th>
+    </tr>
+    <?php
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>".$row["id"]."</td>";
+            echo "<td>".$row["ean_kod"]."</td>";
+            echo "<td>".$row["nazov"]."</td>";
+            echo "<td>".$row["merna_jednotka"]."</td>";
+            if ($_SESSION['user_role'] === 'admin') {
                 echo "<td>".$row["cela_flasa"]."</td>";
                 echo "<td>".$row["prazdna_flasa"]."</td>";
                 echo "<td>".$row["vaha_jednej_davky"]."</td>";
-                echo "<td>".$row["datum"]."</td>";
-                echo "<td>".$row["cas"]."</td>";
-                echo "<td>";
-                echo "<form action='edit-record-in-database.php' method='POST'>";
-                echo "<input type='hidden' name='id' value='".$row["id"]."'>";
-                echo "<button class='edit-button' type='submit'>Upraviť</button>";
-                echo "</form>";
-                echo "</td>";
-                echo "<td>";
-                echo "<form action='delete-record-from-database.php' method='POST'>";
-                echo "<input type='hidden' name='id' value='".$row["id"]."'>";
-                echo "<button class='delete-button' type='submit'>Odstrániť</button>";
-                echo "</form>";
-                echo "</td>";
-                echo "</tr>";
+            } else {
+                echo "<td></td>";
+                echo "<td></td>";
+                echo "<td></td>";
             }
-        } else {
-            echo "<tr><td colspan='11'>Žiadne výsledky!</td></tr>";
+            echo "<td>".$row["datum"]."</td>";
+            echo "<td>".$row["cas"]."</td>";
+            echo "<td>";
+            echo "<form action='edit-record-in-database.php' method='POST'>";
+            echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+            echo "<button class='edit-button' type='submit'>Upraviť</button>";
+            echo "</form>";
+            echo "</td>";
+            echo "<td>";
+            echo "<form action='delete-record-from-database.php' method='POST'>";
+            echo "<input type='hidden' name='id' value='".$row["id"]."'>";
+            echo "<button class='delete-button' type='submit'>Odstrániť</button>";
+            echo "</form>";
+            echo "</td>";
+            echo "</tr>";
         }
-        ?>
-    </table>
-
-    <script>
-        // JavaScript kód pre automatické vyhľadávanie
-        document.getElementById("search").addEventListener("input", function() {
-            var searchValue = this.value.toLowerCase();
-            var tableRows = document.getElementsByTagName("tr");
-
-            for (var i = 1; i < tableRows.length; i++) {
-                var rowData = tableRows[i].getElementsByTagName("td");
-                var foundMatch = false;
-
-                for (var j = 0; j < rowData.length; j++) {
-                    var cellData = rowData[j].innerHTML.toLowerCase();
-
-                    if (cellData.indexOf(searchValue) > -1) {
-                        foundMatch = true;
-                        break;
-                    }
-                }
-
-                if (foundMatch) {
-                    tableRows[i].style.display = "";
-                } else {
-                    tableRows[i].style.display = "none";
-                }
-            }
-        });
-    </script>
+    } else {
+        echo "<tr><td colspan='12'>Žiadne výsledky!</td></tr>";
+    }
+    ?>
+</table>
 
 <?php
 mysqli_close($conn);

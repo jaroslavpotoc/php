@@ -8,13 +8,17 @@ $login = $_POST['login'];
 $password = $_POST['password'];
 
 // SQL query na overenie pouzivatela
-$sql = "SELECT id FROM users WHERE login='$login' AND password='$password'";
+$sql = "SELECT id, login, email FROM users WHERE (login='$login' OR email='$login') AND password='$password'";
 
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     if ($row = mysqli_fetch_assoc($result)) {
-        echo "Používateľ: $login <br> je prihlásený. Vráťte sa prosím na úvodnú stránku.";
+        $username = $row['login'];
+        if (empty($username)) {
+            $username = $row['email'];
+        }
+        echo "Používateľ: $username <br> je prihlásený. Vráťte sa prosím na úvodnú stránku.";
         $_SESSION['users_id'] = $row['id'];
     }
 } else {
@@ -23,4 +27,5 @@ if (mysqli_num_rows($result) > 0) {
 
 include "back.php";
 include "footer.php";
+
 ?>
