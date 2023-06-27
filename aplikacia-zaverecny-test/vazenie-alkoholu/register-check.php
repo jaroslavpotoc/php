@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_stmt_num_rows($checkStatement) > 0) {
         echo "Zadaný login je už použitý. Prosím, vyberte iný login.";
         include "back-register.php";
+        include "footer.php";
         exit;
     }
 
@@ -34,8 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_store_result($checkEmailStatement);
 
     if (mysqli_stmt_num_rows($checkEmailStatement) > 0) {
-        echo "Zadaný email je už použitý. Prosím, použite iný email.";
+        echo "<span style='color: red;'>Používateľ s týmto e-mailom už existuje. Prosím, použite iný e-mail.</span>";
         include "back-register.php";
+        include "footer.php";
         exit;
     }
 

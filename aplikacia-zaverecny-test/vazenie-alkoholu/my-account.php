@@ -21,7 +21,6 @@ if (isset($_SESSION['users_id'])) {
         echo '<div class="button-container">';
         echo '<a href="account/change-password.php" class="custom-button blue">Zmeniť heslo</a>';
         echo '<a href="account/change-email.php" class="custom-button green">Zmeniť e-mail</a>';
-        echo '<a href="account/change-username.php" class="custom-button black">Zmeniť prihlasovacie meno</a>';
         echo '<a href="account/delete-account.php" class="custom-button red">Odstrániť účet</a>';
         echo '</div>';
     } else {
