@@ -1,5 +1,4 @@
 <?php
-include "header.php";
 require "control-logins.php";
 require "db.php";
 
@@ -115,6 +114,4 @@ $result = mysqli_query($conn, $sql);
 
 <?php
 mysqli_close($conn);
-include "back.php";
-include "footer.php";
 ?>

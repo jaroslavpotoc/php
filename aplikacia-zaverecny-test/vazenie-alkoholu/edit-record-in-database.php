@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
         <tr>
             <th>NÁZOV:</th>
-            <td><input type="text" name="nazov" value="<?php echo $nazov; ?>"></td>
+            <td><input type="text" required name="nazov" value="<?php echo $nazov; ?>"></td>
         </tr>
         <tr>
             <th>MERNA JEDNOTKA:</th>
@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
         <tr>
             <th>VAHA JEDNEJ DAVKY:</th>
-            <td><input type="text" step="any" name="vaha_jednej_davky" value="<?php echo $vaha_jednej_davky; ?>"></td>
+            <td><input type="text" step="any" pattern="[0-9]+([.][0-9]+)?" name="vaha_jednej_davky" value="<?php echo $vaha_jednej_davky; ?>"></td>
         </tr>
     </table>
     <input type="hidden" name="id" value="<?php echo $id; ?>">
