@@ -14,5 +14,7 @@
 <p>Ak ešte nemáte účet, môžete sa <a href="register.php">zaregistrovať tu</a>.</p>
 
 
-<?php include "back.php"; ?>
 <?php include "footer.php"; ?>
+<?php
+mysqli_close($conn);
+?>

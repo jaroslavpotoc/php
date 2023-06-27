@@ -5,9 +5,8 @@ require "../PHPMailer-master/src/PHPMailer.php";
 require "../PHPMailer-master/src/SMTP.php";
 require "../PHPMailer-master/src/Exception.php";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = $_POST["login"];
@@ -125,4 +124,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 include "footer.php";
+mysqli_close($conn);
 ?>

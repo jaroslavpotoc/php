@@ -50,3 +50,6 @@
 
 <?php include "back.php"; ?>
 <?php include "footer.php"; ?>
+<?php
+mysqli_close($conn);
+?>

@@ -24,6 +24,7 @@ function validateForm() {
 
     return true;
 }
+
 function validateForm() {
     var password = document.getElementById("password-input").value;
     var confirmPassword = document.getElementById("confirm-password-input").value;

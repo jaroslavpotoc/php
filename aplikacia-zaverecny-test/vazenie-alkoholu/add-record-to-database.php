@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-<h1>PRIDAJ ZÁZNAM | važenia alkoholu</h1>
+<h1 style="text-align: center">PRIDAJ ZÁZNAM | važenia alkoholu</h1>
 <form action="save-form-to-database.php" method="POST" class="form-table">
     <div class="form-row">
         <label for="ean_kod">EAN:</label>
@@ -33,6 +33,8 @@
         <button type="submit">Uložiť</button>
     </div>
 </form>
-
 <?php include "back.php"; ?>
 <?php include "footer.php"; ?>
+<?php
+mysqli_close($conn);
+?>

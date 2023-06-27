@@ -62,4 +62,5 @@ if (mysqli_num_rows($result) > 0) {
 <?php
 include "back.php";
 include "footer.php";
+mysqli_close($conn);
 ?>

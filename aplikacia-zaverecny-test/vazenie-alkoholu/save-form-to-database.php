@@ -25,7 +25,7 @@ if ($_SESSION['user_role'] === 'admin') {
     echo "Nemáte oprávnenie na tento krok. Kontaktujte administrátora.";
 }
 
-mysqli_close($conn);
 include "back.php";
 include "footer.php";
+mysqli_close($conn);
 ?>

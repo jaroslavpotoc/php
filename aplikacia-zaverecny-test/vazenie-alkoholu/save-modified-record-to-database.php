@@ -33,4 +33,5 @@ if ($_SESSION['user_role'] === 'admin') {
 
 include "back.php";
 include "footer.php";
+mysqli_close($conn);
 ?>

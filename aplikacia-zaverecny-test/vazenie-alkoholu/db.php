@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "jpgeneration";
+$password = "9W!tJPdvRNUlKdwk";
 $dbname = "vazenie_schema";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);

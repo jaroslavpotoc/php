@@ -92,7 +92,7 @@ $result = mysqli_query($conn, $sql);
 </table>
 
 <?php
-mysqli_close($conn);
 include "back.php";
 include "footer.php";
+mysqli_close($conn);
 ?>

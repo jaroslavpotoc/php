@@ -29,3 +29,7 @@ if ($userRole !== 'admin' && $userRole !== 'user') {
     exit;
 }
 ?>
+<?php
+mysqli_close($conn);
+?>
+

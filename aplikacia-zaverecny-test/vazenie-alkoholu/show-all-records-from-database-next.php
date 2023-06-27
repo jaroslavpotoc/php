@@ -88,5 +88,4 @@ $result = mysqli_query($conn, $sql);
 
 <?php
 mysqli_close($conn);
-include "back.php";
 ?>

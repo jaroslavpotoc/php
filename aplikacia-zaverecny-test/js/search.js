@@ -1,4 +1,4 @@
-document.getElementById("search").addEventListener("input", function() {
+document.getElementById("search").addEventListener("input", function () {
     var searchValue = this.value.toLowerCase();
     var tableRows = document.getElementsByTagName("tr");
 
