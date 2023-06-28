@@ -12,13 +12,11 @@ if ($_SESSION['user_role'] === 'admin') {
 
         if (mysqli_query($conn, $sql)) {
             echo "Záznam s id: $id bol úspešne odstránený!";
-            echo "<br>";
-            echo "<br>";
         } else {
             echo "Chyba pri odstraňovaní záznamu: " . mysqli_error($conn);
         }
     }
-    include "show-all-records-from-database-next.php";
+    include "edit-next-record.php";
 } else {
     echo "Nemáte oprávnenie na tento krok. Kontaktujte administrátora.";
 }

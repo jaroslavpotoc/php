@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) > 0) {
         if (empty($username)) {
             $username = $row['email'];
         }
-        echo "Používateľ: $username <br> je prihlásený. Vráťte sa prosím na úvodnú stránku.";
+        echo "<h4 style='text-align: center; color: #dd2233; text-transform: uppercase;'>Používateľ: $username </h4><h4 style='text-align: center; color: #dd2233; text-transform: uppercase;'> je prihlásený. Vráťte sa prosím na hlavnú stránku.</h4>";
         $_SESSION['users_id'] = $row['id'];
     }
 } else {

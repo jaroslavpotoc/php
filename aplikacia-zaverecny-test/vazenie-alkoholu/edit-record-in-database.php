@@ -2,7 +2,7 @@
 include "header.php";
 require "control-logins.php";
 require "db.php";
-echo "<h1>UPRAV ZÁZNAM |važenia alkoholu </h1>";
+echo "<h1>UPRAV ZÁZNAM | važenia alkoholu </h1>";
 
 $id = $_POST['id'];
 
@@ -57,7 +57,9 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
     </table>
     <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <div class="form-row" style="display: flex; flex-direction: row; justify-content: center;padding-top: 10px;">
     <button type="submit">Uložiť upravený</button>
+    </div>
 </form>
 <?php
 include "back.php";

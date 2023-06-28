@@ -1,6 +1,6 @@
 <br>
 <hr>
-<h1 style="text-align: center">FOOTER</h1>
+<h1>FOOTER</h1>
 <script src="js/password.js" type="text/javascript"></script>
 <script src="js/register-password.js" type="text/javascript"></script>
 <script src="js/search.js" type="text/javascript"></script>

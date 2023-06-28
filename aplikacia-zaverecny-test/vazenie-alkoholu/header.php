@@ -8,5 +8,5 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<h1 style="text-align: center">HEADER</h1>
+<h1>HEADER</h1>
 <hr>
