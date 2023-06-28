@@ -1,6 +1,6 @@
 .form-table {
     border-collapse: collapse;
-    width: 100%;
+    width: 400px;
 }
 
 .form-table th,
@@ -8,6 +8,7 @@
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    width: 200px;
 }
 
 .form-table th {
@@ -16,7 +17,7 @@
 
 .form-table input,
 .form-table select {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -37,7 +38,7 @@
 }
 
 .form-table {
-    width: 100%;
+    width: 400px;
     border-collapse: collapse;
 }
 
@@ -81,6 +82,7 @@
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    width: 300px;
 }
 
 .data-table th {

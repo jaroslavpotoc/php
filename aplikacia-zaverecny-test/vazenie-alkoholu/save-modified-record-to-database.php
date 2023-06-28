@@ -11,11 +11,11 @@ if ($_SESSION['user_role'] === 'admin') {
         $merna_jednotka = !empty($_POST["merna_jednotka"]) ? "'" . $_POST["merna_jednotka"] . "'" : "NULL";
         $cela_flasa = !empty($_POST["cela_flasa"]) ? $_POST["cela_flasa"] : "NULL";
         $prazdna_flasa = !empty($_POST["prazdna_flasa"]) ? $_POST["prazdna_flasa"] : "NULL";
-        $vaha_jednej_davky = !empty($_POST["vaha_jednej_davky"]) ? $_POST["vaha_jednej_davky"] : "NULL";
+        $delene_1 = !empty($_POST["delene_1"]) ? "'" . $_POST["delene_1"] . "'" : "NULL";
         $datum = date("Y-m-d"); // Aktuálny dátum
         $cas = date("H:i:s"); // Aktuálny čas
 
-        $sql = "UPDATE udaje_tovar SET ean_kod=$ean_kod, nazov='$nazov', merna_jednotka=$merna_jednotka, cela_flasa=$cela_flasa, prazdna_flasa=$prazdna_flasa, vaha_jednej_davky=$vaha_jednej_davky, datum='$datum', cas='$cas' WHERE id=$id";
+        $sql = "UPDATE udaje_tovar SET ean_kod=$ean_kod, nazov='$nazov', merna_jednotka=$merna_jednotka, cela_flasa=$cela_flasa, prazdna_flasa=$prazdna_flasa, delene_1=$delene_1, datum='$datum', cas='$cas' WHERE id=$id";
 
         if (mysqli_query($conn, $sql)) {
             echo "Záznam bol úspešne aktualizovaný!";

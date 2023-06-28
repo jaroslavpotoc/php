@@ -77,6 +77,7 @@ mysqli_close($conn);
             <button type="submit" class="custom-button red" style="background-color: red; color: white;">Odstrániť účet!</button>
         </div>
     </form>
+    <br>
     <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na účet</a>
 </div>
 
@@ -96,5 +97,4 @@ mysqli_close($conn);
         }
     }
 </script>
-
 <?php include "footer2.php"; ?>

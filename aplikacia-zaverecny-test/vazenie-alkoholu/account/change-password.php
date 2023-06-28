@@ -85,8 +85,8 @@ mysqli_close($conn);
             <button type="submit" class="custom-button green" >Zmeniť heslo</button>
         </div>
     </form>
+    <br>
     <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na účet</a>
 </div>
-
 
 <?php include "footer2.php"; ?>
