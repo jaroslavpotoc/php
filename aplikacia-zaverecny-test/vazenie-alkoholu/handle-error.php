@@ -17,9 +17,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "info@jpgeneration.sk";
     $subject = "Hlásenie chyby";
 
+    // Vytvorenie pripojenia k databáze
+    require "db.php";
+
+    // Kontrola pripojenia k databáze
+    if ($conn->connect_error) {
+        die("Chyba pri pripájaní k databáze: " . $conn->connect_error);
+    }
+
+    // Vloženie údajov do databázy
+    $sql = "INSERT INTO error_reports (name, email, description) VALUES ('$name', '$email', '$description')";
+
+    if ($conn->query($sql) === TRUE) {
+        $successMessage = "Hlásenie chyby bolo úspešne odoslané. Ďakujeme!";
+    } else {
+        $errorMessage = "Chyba pri ukladaní údajov do databázy: " . $conn->error;
+    }
+
+    $conn->close();
+
     $mail = new PHPMailer(true);
 
     try {
+        // Konfigurácia odosielania e-mailu
         $mail->isSMTP();
         $mail->Host = 'smtp.m1.websupport.sk';
         $mail->SMTPAuth = true;
@@ -71,12 +91,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </html>';
 
         if (!$mail->send()) {
-            $errorMessage = "Chyba pri odosielaní e-mailu: " . $mail->ErrorInfo;
-        } else {
-            $successMessage = "Hlásenie chyby bolo úspešne odoslané. Ďakujeme!";
+            $errorMessage .= " Chyba pri odosielaní e-mailu: " . $mail->ErrorInfo;
         }
     } catch (Exception $e) {
-        $errorMessage = "Odoslanie hlásenia chyby bolo neúspešné. Skúste to prosím znova.";
         $errorMessage .= " Chybová správa: " . $e->getMessage();
     }
 }
