@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "info@jpgeneration.sk";
     $subject = "Hlásenie chyby";
 
-    // Vytvorenie pripojenia k databáze
     require "db.php";
 
     // Kontrola pripojenia k databáze
@@ -98,13 +97,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Zobraz hlavičku, obsah a pätičku stránky
+
 include('header.php');
 
 echo $successMessage;
 echo $errorMessage;
 
-// Zobraz hlavičku, obsah a pätičku stránky
 include('back.php');
 include('footer.php');
 ?>
