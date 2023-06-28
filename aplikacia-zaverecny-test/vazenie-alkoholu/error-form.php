@@ -1,7 +1,7 @@
 <?php include "header.php"; ?>
 
 <div class="error-container">
-    <h2 class="error-title">Hlásenie chyby</h2>
+    <h1>Váženie alkoholu | Hlásenie chyby</h1>
     <?php if (!empty($errorMessage)) { ?>
         <p class="error-message"><?php echo $errorMessage; ?></p>
     <?php } ?>
