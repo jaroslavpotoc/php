@@ -1,8 +1,6 @@
 <?php
 include "header.php";
 require "db.php";
-
-// Požadovanie súborov knižnice PHPMailer
 require "../PHPMailer-master/src/PHPMailer.php";
 require "../PHPMailer-master/src/SMTP.php";
 require "../PHPMailer-master/src/Exception.php";
@@ -60,15 +58,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Nastavenie SMTP serveru a údajov
             $mail->isSMTP();
-            $mail->Host = 'smtp.m1.websupport.sk';  // Nastavenie adresi SMTP servera
+            $mail->Host = 'smtp.m1.websupport.sk';  // Nastavte adresu vášho SMTP servera
             $mail->SMTPAuth = true;
-            $mail->Username = 'info@jpgeneration.sk';
-            $mail->Password = 'xokjig-kyBdax-4sonwe';
+            $mail->Username = 'info@jpgeneration.sk';  // Nastavte svoj e-mail pre odosielanie
+            $mail->Password = 'xokjig-kyBdax-4sonwe';  // Nastavte svoje heslo pre odosielanie
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;  // Nastavenie portu SMTP servera
+            $mail->Port = 587;  // Nastavte port vášho SMTP servera
 
             // Nastavenie odosielateľa a prijímateľa
-            $mail->setFrom('info@jpgeneration.sk', 'info@jpgeneration.sk');  // Nastavtaevenie e-mail a meno
+            $mail->setFrom('info@jpgeneration.sk', 'info@jpgeneration.sk');  // Nastavte váš e-mail a meno
             $mail->addAddress($email, $login);  // Používateľský e-mail a meno
 
             // Nastavenie obsahu e-mailu

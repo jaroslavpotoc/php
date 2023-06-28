@@ -542,3 +542,83 @@ h1 {
     color: red;
 
 }
+
+.error-container-fot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.error-text {
+    margin-bottom: 10px;
+}
+
+.error-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+}
+
+.error-button:hover {
+    background-color: #d32f2f;
+}
+
+.error-form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.error-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.error-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-input:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+.error-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error-textarea:focus {
+    outline: none;
+    border-color: #2196f3;
+}
