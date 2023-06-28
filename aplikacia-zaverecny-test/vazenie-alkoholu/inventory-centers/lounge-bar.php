@@ -2,13 +2,14 @@
 <?php require "../control-logins.php"; ?>
     <h1>STREDISKO | LOUNGE BAR </h1>
 <?php
-    echo '<div class="button-container">';
-    echo '<a href="#" class="custom-button black">História inventur</a>';
-    echo '<a href="#" class="custom-button green">Začať inventúru</a>';
-    echo '</div>';
+echo '<div class="button-container">';
+echo '<a href="#" class="custom-button black">História inventur</a>';
+echo '<a href="#" class="custom-button green">Začať inventúru</a>';
+echo '</div>';
 ?>
     <br>
     <div class="stred">
-        <a href="../show-inventory-centers.php" class="back-button" style="background-color: black; color: white;">Vrátiť sa na strediská</a>
+        <a href="../show-inventory-centers.php" class="back-button" style="background-color: black; color: white;">Vrátiť
+            sa na strediská</a>
     </div>
 <?php include "footer3.php"; ?>

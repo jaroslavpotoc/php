@@ -5,8 +5,6 @@ if (!isset($_SESSION['users_id'])) {
     header('Location: log-in.php');
     exit;
 }
-
-// Pristup k databaze
 require "db.php";
 
 // Získanie user_role z databázy pre prihláseného používateľa

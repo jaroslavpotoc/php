@@ -72,7 +72,7 @@ $result = mysqli_query($conn, $sql);
         <option value="100" <?php if ($zaznamovNaStranu == 100) echo 'selected'; ?>>100</option>
     </select>
 </form>
-
+<!-- Tabuľka so záznamami -->
 <table class='data-table'>
     <tr>
         <th>ID</th>

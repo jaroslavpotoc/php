@@ -6,6 +6,7 @@
                 <label for="login">Login:</label>
                 <input type="text" name="login" id="login" placeholder="Váš login" required>
                 <?php
+
                 // Kontrola, či zadaný login už existuje v databáze
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $login = $_POST["login"];
@@ -39,6 +40,7 @@
                 <label for="email">Email:</label>
                 <input type="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Váša e-mail adresa" required>
                 <?php
+
                 // Kontrola, či zadaný email už existuje v databáze
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $email = $_POST["email"];

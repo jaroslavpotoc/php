@@ -3,6 +3,7 @@ include "header.php";
 require "control-logins.php";
 require "db.php";
 
+// Uloženie upraveného záznamu
 if ($_SESSION['user_role'] === 'admin') {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $id = $_POST['id'];

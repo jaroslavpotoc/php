@@ -61,24 +61,31 @@ mysqli_close($conn);
         <div class="form-row">
             <label for="current_password">Aktuálne heslo:</label>
             <div class="password-input-wrapper">
-                <input type="password" name="current_password" id="current_password" placeholder="Zadajte aktuálne heslo" required>
-                <i class="fas fa-eye" id="current-password-eye-icon" onclick="togglePassword('current_password','current-password-eye-icon')"></i>
+                <input type="password" name="current_password" id="current_password"
+                       placeholder="Zadajte aktuálne heslo" required>
+                <i class="fas fa-eye" id="current-password-eye-icon"
+                   onclick="togglePassword('current_password','current-password-eye-icon')"></i>
             </div>
         </div>
         <div class="form-row">
             <label for="confirm_password">Potvrďte aktuálne heslo:</label>
             <div class="password-input-wrapper">
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Potvrďte aktuálne heslo" required>
-                <i class="fas fa-eye" id="confirm-password-eye-icon" onclick="togglePassword('confirm_password','confirm-password-eye-icon')"></i>
+                <input type="password" name="confirm_password" id="confirm_password"
+                       placeholder="Potvrďte aktuálne heslo" required>
+                <i class="fas fa-eye" id="confirm-password-eye-icon"
+                   onclick="togglePassword('confirm_password','confirm-password-eye-icon')"></i>
             </div>
         </div>
         <h5 style="text-align: center; color: orangered">PO ODSTRÁNENÍ ÚČTU NEBUDE MOŽNÁ OBNOVA ÚDAJOV Z ÚČTU !!!</h5>
         <div class="form-row">
-            <button type="submit" class="custom-button red" style="background-color: red; color: white;">Odstrániť účet!</button>
+            <button type="submit" class="custom-button red" style="background-color: red; color: white;">Odstrániť
+                účet!
+            </button>
         </div>
     </form>
     <br>
-    <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na účet</a>
+    <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na
+        účet</a>
 </div>
 
 <script>

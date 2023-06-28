@@ -9,6 +9,7 @@ echo '</div>';
 ?>
     <br>
     <div class="stred">
-        <a href="../show-inventory-centers.php" class="back-button" style="background-color: black; color: white;">Vrátiť sa na strediská</a>
+        <a href="../show-inventory-centers.php" class="back-button" style="background-color: black; color: white;">Vrátiť
+            sa na strediská</a>
     </div>
 <?php include "footer3.php"; ?>

@@ -3,13 +3,13 @@ function validateForm() {
     var newPassword = document.getElementById("new_password").value;
     var confirmPassword = document.getElementById("confirm_password").value;
 
-    // Kontrola, či nové heslo a potvrdenie hesla sa zhodujú
+    // Kontrola či nové heslo a potvrdenie hesla sa zhodujú
     if (newPassword !== confirmPassword) {
         alert("Heslo a potvrdenie hesla sa nezhodujú!");
         return false;
     }
 
-    // Kontrola, či nové heslo spĺňa požadované kritériá
+    // Kontrola či nové heslo spĺňa kritériá
     if (newPassword.length > 0) {
         var passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
         if (!passwordRegex.test(newPassword)) {
@@ -18,7 +18,7 @@ function validateForm() {
         }
     }
 
-    // Kontrola, či aktuálne heslo nie je rovnaké ako nové heslo
+    // Kontrola či aktuálne heslo nie je rovnaké ako nové heslo
     if (currentPassword === newPassword) {
         alert("Zadali ste rovnaké heslo ako aktuálne. Skúste zadávať iné heslo.");
         return false;

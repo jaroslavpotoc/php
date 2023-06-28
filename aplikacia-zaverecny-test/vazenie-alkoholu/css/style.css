@@ -72,6 +72,7 @@
 .form-row button:hover {
     background-color: #45a049;
 }
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -303,6 +304,7 @@
     outline: none;
     box-shadow: 0 0 5px #999;
 }
+
 .login-heading {
     text-align: center;
     margin-bottom: 20px;
@@ -482,9 +484,9 @@ h1 {
     text-align: center;
 }
 
- .zaznamy-form {
-     margin-bottom: 20px;
- }
+.zaznamy-form {
+    margin-bottom: 20px;
+}
 
 .strankovanie {
     text-align: center;
@@ -535,6 +537,7 @@ h1 {
     outline: none;
     border-color: #007bff;
 }
+
 .zaznam-text {
     color: red;
 

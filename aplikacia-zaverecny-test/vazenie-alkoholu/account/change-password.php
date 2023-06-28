@@ -63,30 +63,36 @@ mysqli_close($conn);
         <div class="form-row">
             <label for="current_password">Aktuálne heslo:</label>
             <div class="password-input-wrapper">
-                <input type="password" name="current_password" id="current_password" placeholder="Vaše aktuálne heslo" required>
-                <i class="fas fa-eye" id="current-password-eye-icon" onclick="togglePassword('current_password','current-password-eye-icon')"></i>
+                <input type="password" name="current_password" id="current_password" placeholder="Vaše aktuálne heslo"
+                       required>
+                <i class="fas fa-eye" id="current-password-eye-icon"
+                   onclick="togglePassword('current_password','current-password-eye-icon')"></i>
             </div>
         </div>
         <div class="form-row">
             <label for="new_password">Nové heslo:</label>
             <div class="password-input-wrapper">
                 <input type="password" name="new_password" id="new_password" placeholder="Vaše nové heslo" required>
-                <i class="fas fa-eye" id="new-password-eye-icon" onclick="togglePassword('new_password','new-password-eye-icon')"></i>
+                <i class="fas fa-eye" id="new-password-eye-icon"
+                   onclick="togglePassword('new_password','new-password-eye-icon')"></i>
             </div>
         </div>
         <div class="form-row">
             <label for="confirm_password">Potvrďte nové heslo:</label>
             <div class="password-input-wrapper">
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Zopakujte nové heslo" required>
-                <i class="fas fa-eye" id="confirm-password-eye-icon" onclick="togglePassword('confirm_password','confirm-password-eye-icon')"></i>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Zopakujte nové heslo"
+                       required>
+                <i class="fas fa-eye" id="confirm-password-eye-icon"
+                   onclick="togglePassword('confirm_password','confirm-password-eye-icon')"></i>
             </div>
         </div>
         <div class="form-row">
-            <button type="submit" class="custom-button green" >Zmeniť heslo</button>
+            <button type="submit" class="custom-button green">Zmeniť heslo</button>
         </div>
     </form>
     <br>
-    <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na účet</a>
+    <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na
+        účet</a>
 </div>
 
 <?php include "footer2.php"; ?>

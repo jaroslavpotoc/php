@@ -3,6 +3,7 @@ include "header.php";
 require "control-logins.php";
 require "db.php";
 
+// Uloženie záznamu
 if ($_SESSION['user_role'] === 'admin') {
     $ean_kod = !empty($_POST["ean_kod"]) ? "'" . $_POST["ean_kod"] . "'" : "NULL";
     $nazov = $_POST["nazov"];

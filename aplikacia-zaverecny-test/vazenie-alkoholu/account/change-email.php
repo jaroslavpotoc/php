@@ -55,17 +55,21 @@ mysqli_close($conn);
     <form method="POST" action="" class="form-table">
         <div class="form-row">
             <label for="new_email">Nový e-mail:</label>
-            <input type="email" name="new_email" id="new_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Váša nová e-mailová adresa" required>
+            <input type="email" name="new_email" id="new_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                   placeholder="Váša nová e-mailová adresa" required>
         </div>
         <div class="form-row">
             <label for="confirm_email">Potvrďte nový <br> e-mail:</label>
-            <input type="email" name="confirm_email" id="confirm_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Zopakuj e-mailovú adresu" required>
+            <input type="email" name="confirm_email" id="confirm_email"
+                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Zopakuj e-mailovú adresu"
+                   required>
         </div>
         <div class="form-row">
             <button type="submit" class="custom-button green">Zmeniť e-mail</button>
         </div>
     </form>
     <br>
-    <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na účet</a>
+    <a href="../my-account.php" class="custom-button red" style="background-color: black; color: white;">Vrátiť sa na
+        účet</a>
 </div>
 <?php include "footer2.php"; ?>

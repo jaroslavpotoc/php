@@ -2,13 +2,13 @@ function validateForm() {
     var password = document.getElementById("password-input").value;
     var confirmPassword = document.getElementById("confirm-password-input").value;
 
-    // Kontrola, či heslo a potvrdenie hesla sa zhodujú
+    // Kontrola či heslo a potvrdenie hesla sa zhodujú
     if (password !== confirmPassword) {
         alert("Heslo a potvrdenie hesla sa nezhodujú!");
         return false;
     }
 
-    // Kontrola, či heslo spĺňa požadované kritériá
+    // Kontrola či heslo spĺňa kritériá
     var passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
     if (!passwordRegex.test(password)) {
         alert("Heslo musí obsahovať minimálne 6 znakov, jedno veľké písmeno a minimálne jednu číslicu!");

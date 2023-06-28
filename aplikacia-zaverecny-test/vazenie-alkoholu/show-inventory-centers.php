@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 <?php require "control-logins.php"; ?>
-
+<!-- Zobrazenie všetkých stredísk -->
 <h1>STREDISKÁ pre inventúru</h1>
 <div class="container-menu">
     <a href="inventory-centers/lounge-bar.php" class="custom-button lounge-bar">LOUNGE BAR</a>
