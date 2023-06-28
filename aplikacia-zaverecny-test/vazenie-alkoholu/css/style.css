@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .form-table {
     border-collapse: collapse;
     width: 400px;
